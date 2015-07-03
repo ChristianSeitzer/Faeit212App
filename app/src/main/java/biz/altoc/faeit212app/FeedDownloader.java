@@ -31,9 +31,9 @@ class FeedDownloader extends AsyncTask<String, Void, ArrayList<String>> {
     }
 
     @NonNull
-    private String downloadRSSFeed(String url1) throws IOException {
+    private String downloadRSSFeed(String urlString) throws IOException {
         InputStream in;
-        URL url = new URL(url1);
+        URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         in = conn.getInputStream();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
